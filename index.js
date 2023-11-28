@@ -4,7 +4,7 @@ const listContainer = document.getElementById('list-container');
 
 function addTask() {
 
-  listContainer.innerText = '';
+  
     if (inputBox.value === '') {
         alert("Text can't be empty");
     } else {
@@ -44,9 +44,7 @@ function clearAll() {
     if(window.confirm("Delete all tasks permanently?")) {
         listContainer.innerHTML = localStorage.removeItem("ToDoData");
         listContainer.innerHTML = 'All tasks deleted from Local Storage';
-} else {
-  listContainer.innerText = '';
-}
+   } 
 
     
 }
