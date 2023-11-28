@@ -39,7 +39,13 @@ function getData() {
     console.log("getData "+listContainer.innerHTML);
 }
 function clearAll() {
-    listContainer.innerHTML = localStorage.removeItem("ToDoData");
-    listContainer.innerHTML = 'All tasks deleted from Local Storage';
+    if (confirm("Delete all tasks permanently?")) {
+        listContainer.innerHTML = localStorage.removeItem("ToDoData");
+        listContainer.innerHTML = 'All tasks deleted from Local Storage';
+} else {
+  // "You pressed Cancel!";
+}
+
+    
 }
 getData();
