@@ -39,11 +39,11 @@ function getData() {
     console.log("getData "+listContainer.innerHTML);
 }
 function clearAll() {
-    if (confirm("Delete all tasks permanently?")) {
+    if(window.confirm("Delete all tasks permanently?")) {
         listContainer.innerHTML = localStorage.removeItem("ToDoData");
         listContainer.innerHTML = 'All tasks deleted from Local Storage';
 } else {
-  // "You pressed Cancel!";
+  listContainer.innerText = ””;
 }
 
     
